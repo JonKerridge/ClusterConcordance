@@ -1,0 +1,6 @@
+host -ip 127.0.0.1
+emit -n 2 -w 1 -p int,1,int,4,String,D:\IJGradle\ClusterConcordance\src\main\groovy\testFiles\bible.txt!int,5,int,8,String,D:\IJGradle\ClusterConcordance\src\main\groovy\testFiles\bible.txt
+work -n 1 -w 4 -m createIntValueList
+work -n 1 -w 4 -m createValueIndicesMap
+work -n 1 -w 4 -m createWordMap
+collect -n 2 -w 2
