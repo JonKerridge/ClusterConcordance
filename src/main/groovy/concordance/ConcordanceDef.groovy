@@ -1,6 +1,6 @@
 package concordance
 
-import dsl4cc.DSLrecords.EmitInterface
+import cluster_cli.records.EmitInterface
 
 class ConcordanceDef implements  EmitInterface<ConcordanceDef>, Serializable{
 
@@ -144,7 +144,7 @@ class ConcordanceDef implements  EmitInterface<ConcordanceDef>, Serializable{
   // the indices as a list of its location (value)
   def wordMap = [:]		// map of words (key) and list of indices (value)
 
-  void createIntValueList () {
+  void createIntValueList (List params) {
     sequenceList = []
     int partSum = 0
     for (w in 0..wordCount-strLen) {
@@ -155,7 +155,7 @@ class ConcordanceDef implements  EmitInterface<ConcordanceDef>, Serializable{
 //		println "\tcreated sequenceList with strLen = $strLen"
   } //createIntValueList
 
-  void createValueIndicesMap () {
+  void createValueIndicesMap (List params) {
     def index = 0
     def indexList = []
     valueIndicesMap = [:]
@@ -168,7 +168,7 @@ class ConcordanceDef implements  EmitInterface<ConcordanceDef>, Serializable{
 //		println "\t\tcreated valueIndicesMap with strLen = $strLen"
   } //createValueIndicesMap
 
-  void createWordMap () {
+  void createWordMap (List params) {
     def sequenceValues = valueIndicesMap.keySet()
     def wordKeyList = []
     def indexList = []

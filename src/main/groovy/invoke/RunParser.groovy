@@ -1,11 +1,11 @@
 package invoke
 
-import dsl4cc.DSLparse.DSLParser
+import cluster_cli.parse.Parser
 
 class RunParser {
   static void main(String[] args) {
     String workingDirectory = System.getProperty("user.dir")
-    DSLParser parser = new DSLParser("$workingDirectory/src/main/groovy/clusterDSLfiles/concordanceBible21112")
+    Parser parser = new Parser("$workingDirectory/src/main/groovy/clusterDSLfiles/concordance")
     assert parser.parse() :"Parsing failed"
   }
 
