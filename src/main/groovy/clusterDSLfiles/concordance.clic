@@ -1,4 +1,4 @@
-version 1.0.1
+version 1.0.4
 emit -n 1 -w 1 -p int,int,String!1,8,D:\IJGradle\ClusterConcordance\src\main\groovy\testFiles\ACM.txt
 work -n 1 -w 4 -m createIntValueList
 work -n 1 -w 4 -m createValueIndicesMap
