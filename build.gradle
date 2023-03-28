@@ -12,7 +12,7 @@ props.load(propsFile.newDataInputStream())
 
 repositories {
     mavenCentral()
-    mavenLocal()
+//    mavenLocal()
     maven { // to download the jonkerridge.groovy_jcsp library
         name = "GitHubPackages"
         url = "https://maven.pkg.github.com/JonKerridge/groovyJCSP"
@@ -29,14 +29,14 @@ repositories {
             password = props.getProperty("gpr.key")
         }
     }
-//        maven { // to download the cli_cluster_library library
-//        name = "GitHubPackages"
-//        url = "https://maven.pkg.github.com/JonKerridge/cluster_cli_library"
-//        credentials {
-//            username = props.getProperty("gpr.user")
-//            password = props.getProperty("gpr.key")
-//        }
-//    }
+        maven { // to download the cli_cluster_library library
+        name = "GitHubPackages"
+        url = "https://maven.pkg.github.com/JonKerridge/cluster_cli_library"
+        credentials {
+            username = props.getProperty("gpr.user")
+            password = props.getProperty("gpr.key")
+        }
+    }
 }
 
 dependencies {
