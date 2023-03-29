@@ -7,14 +7,14 @@ class ResultCheck {
   @Test
   public void test(){
     int nodes = 1
-    int collectors = 1
+    int collectors = 4
     int minValue, maxValue
     minValue = 501
     maxValue = 900
     List <String> fileNames = []
     for ( n in 0 ..< nodes)
       for ( c in 0 ..< collectors)
-        fileNames << "C:/RunJars/clic/concordanceACM-${n}-${c}.cliCout"
+        fileNames << "./localACM-${n}-${c}.cliCout"
     println "Files are $fileNames"
     fileNames.each { String name ->
       println "$name"

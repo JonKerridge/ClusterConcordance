@@ -2,5 +2,5 @@ version 1.0.4
 emit -n 1 -w 1 -p int,int,String!1,8,D:\IJGradle\ClusterConcordance\src\main\groovy\testFiles\ACM.txt
 work -n 1 -w 4 -m createIntValueList
 work -n 1 -w 4 -m createValueIndicesMap
-work -n 1 -w 4 -m createWordMap
-collect -n 1 -w 1 -f concordanceACM
+work -n 1 -w 6 -m createWordMap
+collect -n 1 -w 6 -f localACM
