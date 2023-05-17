@@ -5,7 +5,10 @@ import concordance.ConcordanceDef
 
 int startN = 1
 int finalN = 8
-String inFileName = "../testFiles/ACM.txt"
+int minSeqLen = 2
+String sourceFileName = "Shakespeare"  //ACM, bible, Bunyan, Shakespeare
+String inputFilePath =  "D:/IJGradle/ClusterConcordance/src/main/groovy/testFiles/"
+String inFileName = inputFilePath + sourceFileName + ".txt"
 long startTime, endTime
 startTime = System.currentTimeMillis()
 ConcordanceDef concordanceDef = new ConcordanceDef([startN, finalN, inFileName])
@@ -18,6 +21,6 @@ while (cd != null){
   cc.collate(cd, [])
   cd = concordanceDef.create()
 } // while
-cc.finalise(["./ACMprnSeq.txt", 2])
+cc.finalise(["./${sourceFileName}prnSeq.txt", 2])
 endTime = System.currentTimeMillis()
 println "elapsed time = ${endTime - startTime}"

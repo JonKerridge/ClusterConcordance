@@ -1,0 +1,6 @@
+version 1.0.5
+emit -n 1 -w 1 -p int,int,String!1,8,..\testFiles\ACM.txt
+work -n 1 -w 4 -m createIntValueList
+work -n 1 -w 4 -m createValueIndicesMap
+work -n 1 -w 4 -m createWordMap
+collect -n 1 -w 4 -fp String,int!..\outputs\ACMprn11.txt,2!..\outputs\ACMprn12.txt,2!..\outputs\ACMprn13.txt,2!..\outputs\ACMprn14.txt,2

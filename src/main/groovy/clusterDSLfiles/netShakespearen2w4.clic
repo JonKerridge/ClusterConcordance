@@ -1,0 +1,6 @@
+version 1.0.5
+emit -n 1 -w 1 -p int,int,String!1,8,..\testFiles\Shakespeare.txt
+work -n 1 -w 4 -m createIntValueList
+work -n 1 -w 4 -m createValueIndicesMap
+work -n 1 -w 4 -m createWordMap
+collect -n 2 -w 4 -fp String,int!..\outputs\Shakespeareprn211.txt,2!..\outputs\Shakespeareprn212.txt,2!..\outputs\Shakespeareprn213.txt,2!..\outputs\Shakespeareprn214.txt,2!..\outputs\Shakespeareprn221.txt,2!..\outputs\Shakespeareprn222.txt,2!..\outputs\Shakespeareprn232.txt,2!..\outputs\Shakespeareprn242.txt,2

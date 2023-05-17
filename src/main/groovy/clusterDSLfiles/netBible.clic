@@ -1,6 +1,0 @@
-version 1.0.4
-emit -n 1 -w 1 -p int,int,String!1,8,.\bible.txt
-work -n 1 -w 4 -m createIntValueList
-work -n 1 -w 4 -m createValueIndicesMap
-work -n 1 -w 4 -m createWordMap
-collect -n 1 -w 1 -f bibleOut
