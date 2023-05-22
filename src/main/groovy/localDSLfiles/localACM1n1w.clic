@@ -1,6 +1,6 @@
-version 1.0.5
+version 1.0.6
 emit -n 1 -w 1 -p int,int,String!1,8,D:\IJGradle\ClusterConcordance\src\main\groovy\testFiles\ACM.txt
 work -n 1 -w 4 -m createIntValueList
 work -n 1 -w 4 -m createValueIndicesMap
 work -n 1 -w 4 -m createWordMap
-collect -n 1 -w 2 -fp String,int!D:\IJGradle\ClusterConcordance\src\main\groovy\sequentialTest\ACMprn11.txt,2!D:\IJGradle\ClusterConcordance\src\main\groovy\sequentialTest\ACMprn12.txt,2
+collect -n 1 -w 1 -fp String,int!D:\IJGradle\ClusterConcordance\src\main\groovy\outputs\ACM11prn11.txt,2

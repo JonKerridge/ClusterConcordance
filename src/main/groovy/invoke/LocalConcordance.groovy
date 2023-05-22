@@ -6,7 +6,7 @@ import cluster_cli.run.HostRun
 
 class LocalConcordance {
   static void main(String[] args) {
-    String structureFile = "D:\\IJGradle\\ClusterConcordance\\src\\main\\groovy\\clusterDSLfiles\\localACM"
+    String structureFile = "D:\\IJGradle\\ClusterConcordance\\src\\main\\groovy\\localDSLfiles\\localBible11121"
     Class  emitClass = ConcordanceDef
     Class collectClass = ConcordanceCollect
     new HostRun(structureFile, emitClass, collectClass, "Local").invoke()
