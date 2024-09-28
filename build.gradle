@@ -5,14 +5,15 @@ plugins {
 group 'jonkerridge'
 version '1.0.0'
 
-String propertyFileName = "C:/Github/gradle.properties"
+String userDir = System.getProperty("user.home")
+String propertyFileName = "$userDir/.github/gradle.properties"
 File propsFile = new File(propertyFileName)
 Properties props = new Properties()
 props.load(propsFile.newDataInputStream())
 
 repositories {
     mavenCentral()
-//    mavenLocal()
+    mavenLocal()
     maven { // to download the jonkerridge.groovy_jcsp library
         name = "GitHubPackages"
         url = "https://maven.pkg.github.com/JonKerridge/groovyJCSP"
@@ -29,7 +30,7 @@ repositories {
             password = props.getProperty("gpr.key")
         }
     }
-        maven { // to download the cli_cluster_library library
+    maven { // to download the cli_cluster_library library
         name = "GitHubPackages"
         url = "https://maven.pkg.github.com/JonKerridge/cluster_cli_library"
         credentials {
@@ -40,10 +41,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.codehaus.groovy:groovy-all:3.0.16'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.22'
     implementation 'cspforjava:jcsp:1.1.9'
     implementation 'jonkerridge:groovy_jcsp:1.1.10'
-    implementation 'jonkerridge:cluster_cli:1.0.6'
+    implementation 'jonkerridge:cluster_cli:1.0.10'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
